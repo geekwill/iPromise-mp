@@ -1,41 +1,40 @@
-<style lang="scss">
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-}
-</style>
+<style lang="scss" src="./assets/scss/reset.scss"></style>
+<style lang="scss" src="./assets/scss/util.scss"></style>
 
 <script>
-import wepy from 'wepy'
-import 'wepy-async-function'
+import wepy from 'wepy';
+import 'wepy-async-function';
+import HttpFilter from './utils/HttpFilter';
 
 export default class extends wepy.app {
   config = {
-    pages: [
-      'pages/home'
-    ],
+    pages: ['pages/home'],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
+      navigationBarTitleText: 'I Promise',
       navigationBarTextStyle: 'black'
     }
+  };
+
+  /**
+   * 全局变量
+   */
+  globalData = {};
+
+  /**
+   * 构造函数
+   */
+  constructor() {
+    super();
+    this.use('requestfix');
+    this.use('promisify');
+    this.intercept('request', HttpFilter);
   }
 
-  globalData = {
-  }
-
-  constructor () {
-    super()
-    this.use('requestfix')
-  }
-
-  onLaunch() {
-  }
-
+  /**
+   * 启动监听
+   */
+  onLaunch() {}
 }
 </script>
