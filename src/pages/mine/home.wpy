@@ -1,0 +1,146 @@
+<style lang="scss">
+.mine-top {
+  background-color: #ebebeb;
+}
+.mine-top-wrap {
+  height: 220rpx;
+  margin: 0 33rpx;
+  padding: 18rpx 0 0;
+  border-bottom: 1rpx solid #cccccc;
+  align-items: center;
+}
+
+.mine-avatar {
+  width: 134rpx;
+  height: 134rpx;
+  margin: 0 26rpx 0 0;
+  border-radius: 67rpx;
+  background-color: #fff;
+}
+
+.mine-story-wrap {
+  height: 88rpx;
+  margin: 0 33rpx 26rpx;
+  font-size: 22rpx;
+  align-items: flex-end;
+  line-height: 1;
+  .s_num {
+    font-size: 60rpx;
+    margin: 0 10rpx 0 0;
+  }
+  .y_num {
+    font-size: 33rpx;
+    margin: 0 10rpx 0 0;
+  }
+}
+
+.mine-story-num {
+  color: #a9a9a9;
+  view {
+    margin: 0 0 0 32rpx;
+  }
+}
+
+.mine-story-items {
+  margin: 0 33rpx;
+  padding: 0 0 53rpx;
+}
+
+.mine-story-item {
+  width: 133rpx;
+  height: 133rpx;
+  padding: 5rpx;
+  background-color: #ffffff;
+  border-radius: 3rpx;
+}
+
+.mine-column {
+  height: 104rpx;
+  align-items: center;
+  padding: 0 33rpx;
+  font-size: 32rpx;
+  border-bottom: 1rpx solid #cccccc;
+
+  &-icon {
+    width: 37rpx;
+    height: 37rpx;
+    margin: 0 10rpx 0 0;
+    background-color: #dddddd;
+  }
+
+  &-right {
+    width: 13rpx;
+    height: 22rpx;
+    background-color: #ccc;
+  }
+}
+</style>
+<template>
+  <view class="container">
+    <view class="mine-top">
+      <view class="flex-row-wrap mine-top-wrap">
+        <image class="mine-avatar" src="" />
+        <view>
+          <view>Nancy</view>
+          <View>等级1</View>
+        </view>
+      </view>
+      <view class="flex-row-wrap flex-between mine-story-wrap">
+        <view><text class="s_num">6</text>个故事</view>
+        <view class="flex-row-wrap mine-story-num">
+          <view><text class="y_num">32</text>关注</view>
+          <view><text class="y_num">21</text>粉丝</view>
+        </view>
+      </view>
+      <view class="flex-row-wrap flex-between mine-story-items">
+        <view class="mine-story-item"></view>
+        <view class="mine-story-item"></view>
+        <view class="mine-story-item"></view>
+        <view class="mine-story-item"></view>
+        <view class="mine-story-item"></view>
+      </view>
+    </view>
+
+    <!-- 我的账户选项 -->
+    <view class="flex-row-wrap flex-between mine-column">
+      <view class="flex-row-wrap flex-center"><image class="mine-column-icon" src="" />购买记录</view>
+      <image class="mine-column-right" src="" />
+    </view>
+    <view class="flex-row-wrap flex-between mine-column">
+      <view class="flex-row-wrap flex-center"><image class="mine-column-icon" src="" />会员特权</view>
+      <image class="mine-column-right" src="" />
+    </view>
+    <view class="flex-row-wrap flex-between mine-column">
+      <view class="flex-row-wrap flex-center"><image class="mine-column-icon" src="" />互动消息</view>
+      <image class="mine-column-right" src="" />
+    </view>
+    <view class="flex-row-wrap flex-between mine-column">
+      <view class="flex-row-wrap flex-center"><image class="mine-column-icon" src="" />我的点赞</view>
+      <image class="mine-column-right" src="" />
+    </view>
+    <view class="flex-row-wrap flex-between mine-column">
+      <view class="flex-row-wrap flex-center"><image class="mine-column-icon" src="" />联系客服</view>
+      <image class="mine-column-right" src="" />
+    </view>
+    
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy';
+import http from '../../utils/Http';
+
+export default class MineHome extends wepy.page {
+  config = {
+    navigationBarTitleText: '我的',
+    backgroundColor: '#ebebeb'
+  };
+  components = {};
+  mixins = [];
+  data = {};
+  computed = {};
+  methods = {};
+  events = {};
+  async onLoad() {}
+}
+</script>

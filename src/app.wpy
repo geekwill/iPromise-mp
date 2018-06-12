@@ -8,7 +8,10 @@ import HttpFilter from './utils/HttpFilter';
 
 export default class extends wepy.app {
   config = {
-    pages: ['pages/home'],
+    pages: [
+      'pages/mine/home',
+      'pages/home/home'
+    ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
