@@ -12,6 +12,10 @@
   align-items: center;
 }
 
+.mine-level {
+  
+}
+
 .mine-avatar {
   width: rpx(202);
   height: rpx(202);
@@ -29,15 +33,16 @@
   .s_num {
     font-size: rpx(90);
     margin: 0 rpx(10) 0 0;
+    // color: #a9a9a9;
   }
   .y_num {
     font-size: rpx(50);
     margin: 0 rpx(10) 0 0;
+    color: #a9a9a9;
   }
 }
 
 .mine-story-num {
-  color: #a9a9a9;
   view {
     margin: 0 0 0 32rpx;
   }
@@ -84,7 +89,7 @@
         <image class="mine-avatar" src="" />
         <view>
           <view>Nancy</view>
-          <View>等级1</View>
+          <View class="mine-level">等级1</View>
         </view>
       </view>
       <view class="flex-row-wrap flex-between mine-story-wrap">
@@ -130,7 +135,7 @@
 
 <script>
 import wepy from 'wepy';
-import http from '../../utils/Http';
+import Http from '../../utils/http';
 
 export default class MineHome extends wepy.page {
   config = {

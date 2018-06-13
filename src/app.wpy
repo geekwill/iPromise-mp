@@ -4,7 +4,7 @@
 <script>
 import wepy from 'wepy';
 import 'wepy-async-function';
-import HttpFilter from './utils/HttpFilter';
+import HttpFilter from './utils/httpFilter';
 
 export default class extends wepy.app {
   config = {

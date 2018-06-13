@@ -29,7 +29,6 @@ video {
 
 <script>
 import wepy from 'wepy';
-import http from '../../utils/Http';
 
 export default class Index extends wepy.page {
   config = {
